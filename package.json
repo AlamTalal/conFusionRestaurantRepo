@@ -1,0 +1,19 @@
+{
+  "name": "confusionrestaurant",
+  "version": "1.0.0",
+  "description": "Full Stack Web Development Learning Purposes",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlamTalal/conFusionRestaurantRepo.git"
+  },
+  "author": "AlamTalal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlamTalal/conFusionRestaurantRepo/issues"
+  },
+  "homepage": "https://github.com/AlamTalal/conFusionRestaurantRepo#readme"
+}
