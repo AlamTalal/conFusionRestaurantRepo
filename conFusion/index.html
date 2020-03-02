@@ -16,6 +16,7 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
         <div class="container">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
@@ -30,9 +31,8 @@
                     <li class="nav-item"><a class= "nav-link" href="./contactus.html"><span class="fa fa-lg fa-address-card"></span> Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
-                        <span class="fa fa-sign-in"></span> Login
-                    </a>
+                    <!--<a data-toggle="modal" data-target="#loginModal"><span class="fa fa-sign-in"></span> Login</a>-->
+                    <a id="loginModalButton"><span class="fa fa-sign-in"></span> Login</a>
                 </span>
             </div>
         </div>
@@ -40,7 +40,6 @@
 
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
-            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Login</h4>
@@ -75,26 +74,8 @@
         </div>
     </div>
 
-    <header class="jumbotron">
-        <div class="container">
-            <div class="row row-header">
-                <div class="col-12 col-sm-6">
-                    <h1>Ristorante con Fusion</h1>
-                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
-                </div>
-                <div class="col-12 col-sm-3 align-self-center">
-                    <img src="./img/logo.png" class="img-fluid" />
-                </div>
-                <div class="col-12 col-sm-3 align-self-center" data-toggle="tooltip" data-html="true" title="Or Call us at <br/><strong>+852 12345678</strong>" data-placement="bottom">
-                    <a role="button" class="btn btn-warning btn-block nav-link" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <div id="reserveModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
-            <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title">Reserve a Table</h4>
@@ -165,6 +146,24 @@
         </div>
     </div>
 
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header">
+                <div class="col-12 col-sm-6">
+                    <h1>Ristorante con Fusion</h1>
+                    <p>We take inspiration from the World's best cuisines, and create a unique fusion experience. Our lipsmacking creations will tickle your culinary senses!</p>
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <img src="./img/logo.png" class="img-fluid" />
+                </div>
+                <div class="col-12 col-sm-3 align-self-center" data-toggle="tooltip" data-html="true" title="Or Call us at <br/><strong>+852 12345678</strong>" data-placement="bottom">
+                    <!--<a role="button" class="btn btn-warning btn-block nav-link" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>-->
+                    <a role="button" id="reserveModalButton" class="btn btn-warning btn-block nav-link">Reserve Table</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
     <div class="container">
         
         <div class="row row-content">
@@ -212,6 +211,10 @@
                     <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
                         <span class="carousel-control-next-icon"></span>
                     </a>
+
+                    <button class="btn btn-danger btn-sm" id="carouselButton">
+                        <span class="fa fa-pause"></span>
+                    </button>
 
                 </div>
              </div>
@@ -263,61 +266,6 @@
             </div>
         </div>
 
-        <!--<div class="row row-content align-items-center" id="reserveform">
-            <div class="col-12 col-sm-8 offset-sm-2">
-                <div class="card">
-                    <h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-                    <div class="card-body">
-                        <form>
-                            <div class="form-group row">
-                                <label for="guestsNum" class="col-md-2 col-form-label">Number of Guests</label>
-                                <div class="col-md-10">
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guestsNum" id="guestsNum1" value="1" />
-                                        <label class="form-check-label" for="guestsNum1"> 1</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guestsNum" id="guestsNum2" value="2" />
-                                        <label class="form-check-label" for="guestsNum2"> 2</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guestsNum" id="guestsNum3" value="3" />
-                                        <label class="form-check-label" for="guestsNum3"> 3</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guestsNum" id="guestsNum4" value="4" />
-                                        <label class="form-check-label" for="guestsNum4"> 4</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guestsNum" id="guestsNum5" value="5" />
-                                        <label class="form-check-label" for="guestsNum5"> 5</label>
-                                    </div>
-                                    <div class="form-check form-check-inline">
-                                        <input class="form-check-input" type="radio" name="guestsNum" id="guestsNum6" value="6" />
-                                        <label class="form-check-label" for="guestsNum6"> 6</label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <label for="reserveDate" class="col-md-2 col-form-label">Date and Time</label>
-                                <div class="col-md-4">
-                                    <input type="text" class="form-control" id="reserveDate" name="reserveDate" placeholder="Date" />
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="text" class="form-control" id="reserveTime" name="reserveTime" placeholder="Time" />
-                                </div>
-                            </div>
-                            <div class="form-group row">
-                                <div class="offset-md-2 col-md-10">
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>-->
-
     </div>
 
     <footer class="footer">
@@ -367,7 +315,32 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script>
-        $(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+            
+            $("#mycarousel").carousel({interval:2000});
+            
+            $("#carouselButton").click(function(){
+                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                    $("#mycarousel").carousel('pause');
+                    $("#carouselButton").children("span").removeClass('fa-pause');
+                    $("#carouselButton").children("span").addClass('fa-play');
+                }
+                else if ($("#carouselButton").children("span").hasClass('fa-play')){
+                    $("#mycarousel").carousel('cycle');
+                    $("#carouselButton").children("span").removeClass('fa-play');
+                    $("#carouselButton").children("span").addClass('fa-pause');                    
+                }
+            });
+
+            $("#loginModalButton").click(function(){
+                $('#loginModal').modal('toggle')
+            });
+
+            $("#reserveModalButton").click(function(){
+                $('#reserveModal').modal('toggle')
+            });
+        });
     </script>
 </body>
 
